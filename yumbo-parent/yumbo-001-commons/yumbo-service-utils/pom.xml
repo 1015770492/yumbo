@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yumbo-001-commons</artifactId>
+        <groupId>top.huashengshu</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>yumbo-service-utils</artifactId>
+    <dependencies>
+        <!--   dao层依赖包含 bean和持久层框架以及来自commons-utils下的工具包     -->
+        <dependency>
+            <groupId>top.huashengshu</groupId>
+            <artifactId>yumbo-api-utils</artifactId>
+            <version>${api-utils.version}</version>
+        </dependency>
+
+        <!-- Redis缓存启动器  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
