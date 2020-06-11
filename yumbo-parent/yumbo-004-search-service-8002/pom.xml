@@ -9,17 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>yumbo-001-commons</artifactId>
-    <description>工具包聚合</description>
-    <packaging>pom</packaging>
-
-
-    <modules>
-        <module>yumbo-commons-utils</module>
-        <module>yumbo-api-utils</module>
-        <module>yumbo-service-utils</module>
-        <module>yumbo-web-utils</module>
-    </modules>
-
+    <artifactId>yumbo-004-search-service-8002</artifactId>
+    <description>搜索服务</description>
 
 </project>

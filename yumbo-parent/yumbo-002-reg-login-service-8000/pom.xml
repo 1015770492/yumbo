@@ -9,17 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>yumbo-001-commons</artifactId>
-    <description>工具包聚合</description>
-    <packaging>pom</packaging>
+    <artifactId>yumbo-002-reg-login-service-8000</artifactId>
+    <description>注册登录服务</description>
 
-
-    <modules>
-        <module>yumbo-commons-utils</module>
-        <module>yumbo-api-utils</module>
-        <module>yumbo-service-utils</module>
-        <module>yumbo-web-utils</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>top.huashengshu</groupId>
+            <artifactId>yumbo-web-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.huashengshu</groupId>
+            <artifactId>yumbo-service-utils</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

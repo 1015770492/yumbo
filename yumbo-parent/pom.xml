@@ -10,22 +10,30 @@
     <version>1.0</version>
     <modules>
         <module>yumbo-001-commons</module>
+        <module>yumbo-002-reg-login-service-8000</module>
+        <module>yumbo-003-fdfs-service-8001</module>
+        <module>yumbo-004-search-service-8002</module>
+        <module>yumbo-005-blog-service-8003</module>
+        <module>yumbo-006-bbs-service-8004</module>
+        <module>yumbo-007-music-service-8005</module>
     </modules>
 
     <!-- 版本管理配置  -->
     <properties>
-        <!--子模块版本配置-->
+
+        <!--公共子模块版本配置-->
         <api-utils.version>1.0</api-utils.version>
         <service-utils.version>1.0</service-utils.version>
-        <common-utils.version>1.0</common-utils.version>
+        <commons-utils.version>1.0</commons-utils.version>
         <web-utils.version>1.0</web-utils.version>
 
         <!--依赖管理-->
         <spring-boot-dependencies.version>2.2.6.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2.2.1.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring-security-oauth2.version>2.3.6.RELEASE</spring-security-oauth2.version>
 
-<!--        <dubbo.version>2.7.6</dubbo.version>-->
-<!--        <dubbo-zookeeper.version>2.7.6</dubbo-zookeeper.version>-->
+        <!--        <dubbo.version>2.7.6</dubbo.version>-->
+        <!--        <dubbo-zookeeper.version>2.7.6</dubbo-zookeeper.version>-->
 
         <!-- yumbo-commons-utits  版本依赖管理-->
         <fastjson.version>1.2.68</fastjson.version>
@@ -38,7 +46,7 @@
         <mybatisPlus.version>3.3.1.tmp</mybatisPlus.version>
         <mysql.version>5.1.48</mysql.version>
         <lombok.version>1.18.12</lombok.version>
-        <druid.version>1.1.13</druid.version>
+        <druid.version>1.1.17</druid.version>
 
 
         <!--openBlogX-manage-controller 版本依赖管理-->
@@ -52,6 +60,35 @@
     <!-- 依赖管理-->
     <dependencyManagement>
         <dependencies>
+            <!-- 自定义服务 版本管理-->
+            <!--    web服务工具包     -->
+            <dependency>
+                <groupId>top.huashengshu</groupId>
+                <artifactId>yumbo-web-utils</artifactId>
+                <version>${web-utils.version}</version>
+            </dependency>
+            <!--   公共工具包    -->
+            <dependency>
+                <groupId>top.huashengshu</groupId>
+                <artifactId>yumbo-commons-utils</artifactId>
+                <version>${commons-utils.version}</version>
+            </dependency>
+            <!--   api工具包    -->
+            <dependency>
+                <groupId>top.huashengshu</groupId>
+                <artifactId>yumbo-api-utils</artifactId>
+                <version>${api-utils.version}</version>
+            </dependency>
+            <!--   服务工具包    -->
+            <dependency>
+                <groupId>top.huashengshu</groupId>
+                <artifactId>yumbo-service-utils</artifactId>
+                <version>${service-utils.version}</version>
+            </dependency>
+
+
+
+
             <!-- spring-boot下所有版本依赖的管理 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -60,19 +97,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-<!--            &lt;!&ndash; dubbo 启动器 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.apache.dubbo</groupId>-->
-<!--                <artifactId>dubbo-spring-boot-starter</artifactId>-->
-<!--                <version>${dubbo.version}</version>-->
-<!--            </dependency>-->
-<!--            &lt;!&ndash;zookeeper 注册中心客户端引入 使用的是curator客户端 &ndash;&gt;-->
-<!--            <dependency>-->
-<!--                <groupId>org.apache.dubbo</groupId>-->
-<!--                <artifactId>dubbo-dependencies-zookeeper</artifactId>-->
-<!--                <version>${dubbo-zookeeper.version}</version>-->
-<!--            </dependency>-->
-
+            <!--  spring-cloud  阿里巴巴依赖管理  -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--commons-utils模块-->
             <!-- fastjson Json工具包 -->
             <dependency>
@@ -124,6 +156,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisPlus.version}</version>
+            </dependency>
+            <!--    spring-boot-jdbc druid的依赖    -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
             </dependency>
             <!-- mysql jdbc连接 -->
             <dependency>

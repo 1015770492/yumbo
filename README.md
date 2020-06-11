@@ -4,4 +4,6 @@
 ### 思维导图的png
 ![avatar](https://github.com/1015770492/yumbo/blob/master/xmind%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E6%96%87%E4%BB%B6/%E5%8D%9A%E5%AE%A2%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png)
 
+微服务模块命名规则
+yumbo-xxx-服务名-服务端口
 
