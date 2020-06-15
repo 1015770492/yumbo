@@ -37,11 +37,8 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
-        <!-- httpclient Http工具包-->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-        </dependency>
+        <!-- Http工具包请使用web依赖自带的RestTemplete工具，更简单-->
+
     </dependencies>
 
 </project>

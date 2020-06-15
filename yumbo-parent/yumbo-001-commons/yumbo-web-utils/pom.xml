@@ -17,6 +17,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- spring-boot-starter-actuator 服务监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!-- springfox-swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>

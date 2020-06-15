@@ -31,6 +31,7 @@
         <spring-boot-dependencies.version>2.2.6.RELEASE</spring-boot-dependencies.version>
         <spring-cloud-alibaba-dependencies.version>2.2.1.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring-security-oauth2.version>2.3.6.RELEASE</spring-security-oauth2.version>
+        <spring-boot-starter-jdbc.version>2.2.6.RELEASE</spring-boot-starter-jdbc.version>
 
         <!--        <dubbo.version>2.7.6</dubbo.version>-->
         <!--        <dubbo-zookeeper.version>2.7.6</dubbo-zookeeper.version>-->
@@ -104,6 +105,12 @@
                 <version>${spring-cloud-alibaba-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring-boot-starter-jdbc.version}</version>
             </dependency>
             <!--commons-utils模块-->
             <!-- fastjson Json工具包 -->
