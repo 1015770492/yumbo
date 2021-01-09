@@ -32,25 +32,27 @@
         <spring-cloud-alibaba-dependencies.version>2.2.1.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring-security-oauth2.version>2.3.6.RELEASE</spring-security-oauth2.version>
         <spring-boot-starter-jdbc.version>2.2.6.RELEASE</spring-boot-starter-jdbc.version>
+        <alicloud-oss.version>2.2.0.RELEASE</alicloud-oss.version>
 
         <!--        <dubbo.version>2.7.6</dubbo.version>-->
         <!--        <dubbo-zookeeper.version>2.7.6</dubbo-zookeeper.version>-->
 
-        <!-- yumbo-commons-utits  版本依赖管理-->
+        <!-- yumbo-commons-utils  版本依赖管理-->
+        <yumbo-music-utils.version>1.0</yumbo-music-utils.version>
         <fastjson.version>1.2.68</fastjson.version>
         <httpclient.version>4.5.12</httpclient.version>
         <commons-io.version>2.7</commons-io.version>
         <commons-lang3.version>3.10</commons-lang3.version>
         <commons-codec.version>1.14</commons-codec.version>
 
-        <!--openBlogX-manage-service-utils 版本依赖管理-->
+        <!--yumbo-manage-service-utils 版本依赖管理-->
         <mybatisPlus.version>3.3.1.tmp</mybatisPlus.version>
         <mysql.version>5.1.48</mysql.version>
         <lombok.version>1.18.12</lombok.version>
         <druid.version>1.1.17</druid.version>
 
 
-        <!--openBlogX-manage-controller 版本依赖管理-->
+        <!-- yumbo-controller 版本依赖管理-->
         <swagger.version>2.9.2</swagger.version>
         <swagger-ui.version>2.9.2</swagger-ui.version>
 
@@ -88,7 +90,20 @@
             </dependency>
 
 
-
+            <!--  spring-cloud  阿里巴巴依赖管理  -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- spring-cloud-starter-alicloud-oss OSS对象存储服务-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alicloud-oss</artifactId>
+                <version>${alicloud-oss.version}</version>
+            </dependency>
 
             <!-- spring-boot下所有版本依赖的管理 -->
             <dependency>
@@ -98,15 +113,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--  spring-cloud  阿里巴巴依赖管理  -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring-cloud-alibaba-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
 
+            <!-- spring-cloud-dependencies -->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.cloud</groupId>-->
+            <!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+            <!--                <version>Hoxton.SR6</version>-->
+            <!--                <type>pom</type>-->
+            <!--                <scope>import</scope>-->
+            <!--            </dependency>-->
+
+
+            <!--spring-boot-jdbc依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -119,6 +137,7 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
             <!-- commons-io 文件流工具包 -->
             <dependency>
                 <groupId>commons-io</groupId>
@@ -145,6 +164,11 @@
             </dependency>
 
             <!--controller模块-->
+            <dependency>
+                <groupId>top.yumbo</groupId>
+                <artifactId>yumbo-music-utils</artifactId>
+                <version>${yumbo-music-utils.version}</version>
+            </dependency>
             <!-- swagger2 -->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -203,6 +227,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

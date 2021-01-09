@@ -11,6 +11,12 @@
 
     <artifactId>yumbo-007-music-service-8005</artifactId>
     <description>音乐服务</description>
+    <dependencies>
+        <dependency>
+            <groupId>top.yumbo</groupId>
+            <artifactId>yumbo-music-utils</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

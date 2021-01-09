@@ -12,5 +12,16 @@
     <artifactId>yumbo-003-fdfs-service-8001</artifactId>
     <description>小文件分布式存储服务</description>
 
+    <dependencies>
+        <!-- spring-cloud-starter-alicloud-oss OSS对象存储服务-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alicloud-oss</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.huashengshu</groupId>
+            <artifactId>yumbo-web-utils</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
